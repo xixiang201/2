@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>102 谢映奇</title>
+    <style>
+        /*子代选择器*/
+        .yijicaidan>li{
+            list-style: none;
+            float: left;
+            background-color: rgb(208, 211, 211);
+            margin:0px 3px;
+            width: 80px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            position: relative;
+        }
+        a{
+            font-size: 20px;
+            color: rgb(87, 80, 94);
+            text-decoration: none;
+        }
+        .yijihezi{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .erjihezi{
+            position: absolute;
+            left: 81px;
+            list-style: none;
+            background-color: aliceblue;
+            width: 80px;
+            border-radius: 8px;
+            display: none;
+            z-index: 1000;
+        }
+        .erjicaidan{
+            padding: 0px;
+        }
+        .erjicaidan>li{
+            width: 80;
+            height: 30px;
+            margin: 0px 18px;
+            display: block;
+            align-items: center;
+        }
+        .yijicaidan>li:hover>.erjihezi{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="yijihezi">
+        <ul class="yijicaidan">
+            <li>
+                <a href="">娱乐</a>
+            </li>
+            <li>
+                <a href="">科技</a>
+                <div class="erjihezi">
+                    <ul class="erjicaidan">
+                        <li><a href="">数码</a></li>
+                        <li><a href="">手机</a></li>
+                        <li><a href="">电脑</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="">美食</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
